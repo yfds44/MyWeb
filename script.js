@@ -73,65 +73,89 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-const themeToggle = document.getElementById("themeToggle");
-const themeToggleMobile = document.getElementById("themeToggleMobile");
+  const themeToggle = document.getElementById("themeToggle");
+  const themeToggleMobile = document.getElementById("themeToggleMobile");
 
-function updateThemeButtons(isDark) {
-  const buttons = [
-    themeToggle,
-    themeToggleMobile
-  ].filter(Boolean);
+  function updateThemeButtons(isDark) {
+    const buttons = [themeToggle, themeToggleMobile].filter(Boolean);
 
-  buttons.forEach((button) => {
-    button.setAttribute(
-      "aria-pressed",
-      isDark ? "true" : "false"
-    );
-  });
-}
+    buttons.forEach((button) => {
+      button.setAttribute("aria-pressed", isDark ? "true" : "false");
+    });
+  }
 
-function setTheme(isDark) {
-  document.body.classList.toggle("dark-mode", isDark);
+  function setTheme(isDark) {
+    document.body.classList.toggle("dark-mode", isDark);
 
-  localStorage.setItem(
-    "theme",
-    isDark ? "dark" : "light"
-  );
+    localStorage.setItem("theme", isDark ? "dark" : "light");
 
-  updateThemeButtons(isDark);
-}
+    updateThemeButtons(isDark);
+  }
 
+  /* Tema tersimpan */
+  const savedTheme = localStorage.getItem("theme");
 
-/* Tema tersimpan */
-const savedTheme = localStorage.getItem("theme");
+  if (savedTheme === "dark") {
+    setTheme(true);
+  } else {
+    setTheme(false);
+  }
 
-if (savedTheme === "dark") {
-  setTheme(true);
-} else {
-  setTheme(false);
-}
+  /* Tombol desktop */
+  if (themeToggle) {
+    themeToggle.addEventListener("click", () => {
+      const isDark = !document.body.classList.contains("dark-mode");
 
+      setTheme(isDark);
+    });
+  }
 
-/* Tombol desktop */
-if (themeToggle) {
-  themeToggle.addEventListener("click", () => {
+  /* Tombol mobile */
+  if (themeToggleMobile) {
+    themeToggleMobile.addEventListener("click", () => {
+      const isDark = !document.body.classList.contains("dark-mode");
 
-    const isDark =
-      !document.body.classList.contains("dark-mode");
-
-    setTheme(isDark);
-  });
-}
-
-
-/* Tombol mobile */
-if (themeToggleMobile) {
-  themeToggleMobile.addEventListener("click", () => {
-
-    const isDark =
-      !document.body.classList.contains("dark-mode");
-
-    setTheme(isDark);
-  });
-}
+      setTheme(isDark);
+    });
+  }
 });
+
+/* ==========================================================
+     IMAGE MODAL / LIGHTBOX
+     ========================================================== */
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeModal = document.getElementById("modalClose");
+
+  if (modal && modalImg && closeModal) {
+    // Cari semua gambar di dalam kartu
+    const galleryImages = document.querySelectorAll(".portfolio-card__thumb img");
+
+    // Tambahkan aksi klik pada setiap gambar
+    galleryImages.forEach(img => {
+      img.addEventListener("click", function() {
+        modal.classList.add("is-open");
+        modalImg.src = this.src; // Ambil sumber gambar yang diklik
+        modalImg.alt = this.alt;
+      });
+    });
+
+    // Tutup modal ketika tombol X diklik
+    closeModal.addEventListener("click", () => {
+      modal.classList.remove("is-open");
+    });
+
+    // Tutup modal ketika pengguna klik di luar area gambar
+    modal.addEventListener("click", (e) => {
+      if (e.target === modal) {
+        modal.classList.remove("is-open");
+      }
+    });
+
+    // Tutup modal jika tombol "Escape" di keyboard ditekan
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "Escape" && modal.classList.contains("is-open")) {
+        modal.classList.remove("is-open");
+      }
+    });
+  }
