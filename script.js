@@ -1,8 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-  /* ==========================================================
-     CUSTOM CURSOR SCRIPT
-     ========================================================== */
-  // Hanya jalankan jika bukan layar sentuh (mobile)
+
   if (window.matchMedia("(pointer: fine)").matches) {
     const cursor = document.createElement('div');
     cursor.classList.add('custom-cursor');
@@ -16,31 +13,26 @@ document.addEventListener("DOMContentLoaded", () => {
       mouseY = e.clientY;
     });
 
-    // RequestAnimationFrame untuk pergerakan kursor yang smooth
     const animateCursor = () => {
-      // Faktor easing (0.15 = semakin kecil semakin "lambat/smooth" ngikutinnya)
+
       cursorX += (mouseX - cursorX) * 0.2;
       cursorY += (mouseY - cursorY) * 0.2;
-      
+
       cursor.style.left = `${cursorX}px`;
       cursor.style.top = `${cursorY}px`;
-      
+
       requestAnimationFrame(animateCursor);
     };
     animateCursor();
 
-    // Efek Hover membesar pada link, button, dan gambar portfolio
     const hoverElements = document.querySelectorAll('a, button, .portfolio-card__thumb img, .theme-switch');
-    
+
     hoverElements.forEach(el => {
       el.addEventListener('mouseenter', () => cursor.classList.add('is-hovering'));
       el.addEventListener('mouseleave', () => cursor.classList.remove('is-hovering'));
     });
   }
 
-  /* ==========================================================
-     NAVBAR DROPDOWN
-     ========================================================== */
   const navToggle = document.getElementById("navToggle");
   const navMenu = document.getElementById("navMenu");
 
@@ -80,9 +72,6 @@ document.addEventListener("DOMContentLoaded", () => {
     window.addEventListener("scroll", handleScroll, { passive: true });
   }
 
-  /* ==========================================================
-     REVEAL ANIMATION ON SCROLL (FIXED)
-     ========================================================== */
   const revealEls = document.querySelectorAll(".reveal");
   const prefersReducedMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
 
@@ -95,7 +84,7 @@ document.addEventListener("DOMContentLoaded", () => {
           entries.forEach((entry) => {
             if (entry.isIntersecting) {
               entry.target.classList.add("is-visible");
-              // Kembalikan overflow & height ke auto setelah animasi selesai
+
               setTimeout(() => {
                 entry.target.style.maxHeight = "none";
                 entry.target.style.overflow = "visible";
@@ -113,9 +102,6 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   }
 
-  /* ==========================================================
-     THEME TOGGLE
-     ========================================================== */
   const themeToggle = document.getElementById("themeToggle");
   const themeToggleMobile = document.getElementById("themeToggleMobile");
 
@@ -146,9 +132,6 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 });
 
-/* ==========================================================
-   IMAGE MODAL / LIGHTBOX
-   ========================================================== */
 const modal = document.getElementById("imageModal");
 const modalImg = document.getElementById("modalImage");
 const closeModal = document.getElementById("modalClose");
@@ -217,9 +200,6 @@ if (modal && modalImg && closeModal) {
   });
 }
 
-/* ==========================================================
-   PRELOADER ANIMATION
-   ========================================================== */
 window.addEventListener("load", () => {
   const preloader = document.getElementById("preloader");
   const progressBar = document.getElementById("preloaderProgress");

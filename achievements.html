@@ -10,34 +10,33 @@
 </head>
 
 <body>
-  <!-- ============ SCRIPT ANTI-KEDIP ============ -->
+
   <script>
     if (sessionStorage.getItem("hasSeenPreloader") === "true") {
-      // Cek apakah user menekan tombol Reload/Refresh (F5)
+
       const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
       if (!isReload) {
-        document.documentElement.classList.add("skip-preloader"); // Sembunyikan seketika
+        document.documentElement.classList.add("skip-preloader"); 
       }
     }
   </script>
 
-  <!-- ============ PRELOADER (SCI-FI STYLE) ============ -->
   <div id="preloader" class="preloader">
     <div class="preloader__content">
       <div class="preloader__bar-container">
-        <!-- Kotak Loading Bar -->
+
         <div class="preloader__bar">
           <div class="preloader__progress" id="preloaderProgress"></div>
         </div>
-        <!-- Angka Persentase -->
+
         <div class="preloader__percentage" id="preloaderPercentage">0%</div>
       </div>
     </div>
   </div>
-  <!-- ============ NAVBAR ============ -->
+
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
-      <!-- DROPDOWN BUTTON — KIRI -->
+
       <button class="navbar__toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false"
         aria-controls="navMenu">
         <span></span>
@@ -45,63 +44,39 @@
         <span></span>
       </button>
 
-      <!-- MENU DROPDOWN — KIRI -->
       <nav class="navbar__menu" id="navMenu" aria-hidden="true">
-        <a href="index.html" class="navbar__link"> Home </a>
-
+        <a href="index.html" class="navbar__link is-active"> Home </a>
         <a href="portfolio.html" class="navbar__link"> Portfolio </a>
-
-        <a href="achievements.html" class="navbar__link is-active"> Achievements </a>
+        <a href="achievements.html" class="navbar__link"> Achievements </a>
 
         <a href="CV YUSRIYAH FAJAR DWIPUTRA SANTOSO.pdf" download class="btn btn--primary btn--sm">
           Download My CV
         </a>
-
-        <!-- THEME SWITCH — KHUSUS MOBILE -->
-        <div class="navbar__mobile-theme">
-          <span class="navbar__mobile-theme-label"> Change theme </span>
-
-          <button class="theme-switch" id="themeToggleMobile" type="button" aria-label="Ganti mode warna"
-            aria-pressed="false">
-            <span class="theme-switch__icon theme-switch__icon--sun">☀</span>
-
-            <span class="theme-switch__track">
-              <span class="theme-switch__thumb"></span>
-            </span>
-
-            <span class="theme-switch__icon theme-switch__icon--moon">☾</span>
-          </button>
-        </div>
       </nav>
 
-      <!-- NAMA / JUDUL — TENGAH -->
       <span class="navbar__brand">
         HELLO!!!, this is my personal website
       </span>
 
-      <!-- KOMPONEN KANAN -->
       <div class="navbar__actions">
-        <!-- TOMBOL UBAH TEMA -->
+
         <button class="theme-switch" id="themeToggle" type="button" aria-label="Ganti mode warna" aria-pressed="false">
           <span class="theme-switch__icon theme-switch__icon--sun">☀</span>
-
           <span class="theme-switch__track">
             <span class="theme-switch__thumb"></span>
           </span>
-
           <span class="theme-switch__icon theme-switch__icon--moon">☾</span>
         </button>
 
-        <!-- LOGO — PALING KANAN -->
-        <span class="navbar__logo" aria-label="Beranda">
+        <a href="index.html" class="navbar__logo" aria-label="Beranda">
           <img src="Anggep ae logo.jpg" alt="Logo Yusriyah Fajar Dwiputra Santoso" class="navbar__logo-image" />
-        </span>
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ============ HEADER HALAMAN ============ -->
+
     <section class="page-header">
       <div class="container reveal">
         <p class="eyebrow">Track Record</p>
@@ -116,7 +91,6 @@
       <div class="container">
         <div class="portfolio-grid">
 
-          <!-- 1. Juara II LKS 2024 -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Mechatronics - Juara II - YUSRIYAH FAJAR DWIPUTRA SANTOSO - SMKN 8 MALANG - 2024.png"
@@ -134,7 +108,6 @@
             </div>
           </article>
 
-          <!-- 2. Peserta LKS 2024 -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Mechatronics - Peserta - YUSRIYAH FAJAR DWIPUTRA SANTOSO - SMKN 8 MALANG - 2024.png"
@@ -152,7 +125,6 @@
             </div>
           </article>
 
-          <!-- 3. Juara II LKS 2025 -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Mechatronics - Juara II - YUSRIYAH FAJAR DWIPUTRA SANTOSO - SMKN 8 MALANG - 2025.png"
@@ -170,7 +142,6 @@
             </div>
           </article>
 
-          <!-- 4. PLC Maestro Fest 2025 -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Sertifikat Peserta PLC Maestro Fest 2025 Yusriyah Fajar Dwiputra Santoso-1.png"
@@ -187,7 +158,6 @@
             </div>
           </article>
 
-          <!-- 5. PLC WEPC 2025 -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Sertifikat Peserta PLC WEPC 2025 Yusriyah Fajar Dwiputra Santoso.png"
@@ -204,7 +174,6 @@
             </div>
           </article>
 
-          <!-- 6. Sumobot RC Technocorner 2026 -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img
@@ -222,7 +191,6 @@
             </div>
           </article>
 
-          <!-- 7. Webinar Nasional PLC Omron -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Sertifikat Webinar Nasional PLC Omron YUSRIYAH FAJAR DWIPUTRA SANTOSO.png"
@@ -238,7 +206,6 @@
             </div>
           </article>
 
-          <!-- 12. Seleksi Daerah ASC 2024 -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Sertifikat Peserta Seleksi Daerah ASC 2024.png" alt="Seleksi Daerah ASC 2024"
@@ -255,7 +222,6 @@
             </div>
           </article>
 
-          <!-- 8. Webinar Nasional PLC Siemens -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Sertifikat Webinar PLC Siemens YUSRIYAH FAJAR DWIPUTRA SANTOSO.png"
@@ -272,10 +238,9 @@
             </div>
           </article>
 
-          <!-- 9. Sertifikasi Festo -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb is-portrait">
-              <!-- Tambahkan class="is-portrait" di sini -->
+
               <img src="Sertifikat/Sertifikasi Festo.png" alt="Sertifikasi Festo">
             </div>
             <div class="portfolio-card__body">
@@ -289,7 +254,6 @@
             </div>
           </article>
 
-          <!-- 10. Uji Level Kompetisi Keahlian -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb is-portrait">
               <img src="Sertifikat/Sertifikat Uji Level SMK.png" alt="Uji Level SMK">
@@ -305,7 +269,6 @@
             </div>
           </article>
 
-          <!-- 11. Sertifikat UK SMK -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb is-portrait">
               <img src="Sertifikat/Sertifikat UK SMK.png" alt="UK SMK">
@@ -321,7 +284,6 @@
             </div>
           </article>
 
-          <!-- 13. Embedded Dev Study Jam #2 -->
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
               <img src="Sertifikat/Sertifikat of completion Embedded Dev Gdgoc Study jam %232.png"
@@ -393,32 +355,27 @@
     </section>
   </main>
 
-  <!-- Modal / Lightbox Tinjau Gambar dengan Slider -->
   <div id="imageModal" class="modal" aria-hidden="true">
     <span class="modal__close" id="modalClose">&times;</span>
 
-    <!-- Tombol Panah Kiri -->
     <button class="modal__nav modal__nav--prev" id="modalPrev" aria-label="Gambar Sebelumnya">&#10094;</button>
 
     <img class="modal__content" id="modalImage" alt="Preview Gambar">
 
-    <!-- Tombol Panah Kanan -->
     <button class="modal__nav modal__nav--next" id="modalNext" aria-label="Gambar Selanjutnya">&#10095;</button>
   </div>
 
   <footer class="footer">
     <div class="container footer__inner">
 
-      <!-- Bagian Kiri: Copyright & Counter -->
       <div>
         <p>&copy; 2026 Yusriyah Fajar Dwiputra Santoso. <br> 👀 <span id="visitorCount">Memuat...</span>
           orang telah
           melihat website ini.</p>
       </div>
 
-      <!-- Bagian Kanan: Social Media -->
       <div class="footer__socials">
-        <!-- (Kode icon instagram, linkedin, threads tetap sama, jangan dihapus) -->
+
         <a href="https://instagram.com/oiisrill_" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" />
@@ -446,7 +403,7 @@
     </div>
   </footer>
   <script src="script.js"></script>
-  <!-- SCRIPT FIREBASE VISITOR COUNTER -->
+
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
     import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
@@ -464,22 +421,19 @@
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
 
-    // 1. Menggunakan satu database utama untuk semua halaman (Global)
     const visitorRef = ref(db, 'visitorCount');
 
-    // 2. Mengecek apakah device ini sudah pernah berkunjung
     const hasVisited = localStorage.getItem('telahBerkunjung');
 
     if (!hasVisited) {
-      // Jika belum, tambah +1
+
       runTransaction(visitorRef, (currentCount) => {
         return (currentCount || 0) + 1;
       });
-      // 3. Simpan ingatan ke browser (Ini yang sebelumnya typo)
+
       localStorage.setItem('telahBerkunjung', 'true');
     }
 
-    // 4. Menampilkan angka ke layar
     onValue(visitorRef, (snapshot) => {
       const data = snapshot.val();
       const countElement = document.getElementById('visitorCount');

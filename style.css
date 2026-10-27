@@ -1,6 +1,3 @@
-/* ==========================================================
-   RESET & DASAR
-   ========================================================== */
 *, *::before, *::after {
   box-sizing: border-box;
   margin: 0;
@@ -9,7 +6,7 @@
 
 html {
   scroll-behavior: smooth;
-  /* Memperhalus scroll */
+
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -23,8 +20,6 @@ html {
   }
 }
 
-/* 1. TEKSTUR NOISE (ANTI AI SLOP) */
-/* Menambahkan tekstur biji-bijian halus seperti kertas foto */
 body::before {
   content: "";
   position: fixed;
@@ -34,7 +29,7 @@ body::before {
   height: 100vh;
   pointer-events: none;
   z-index: 9998;
-  /* Di bawah preloader, di atas konten */
+
   opacity: 0.04;
   background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
 }
@@ -46,12 +41,10 @@ body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  /* Membuat font lebih tajam */
-  /* Custom Cursor Base */
+
   cursor: none;
 }
 
-/* Memastikan kursor tetap terlihat di layar sentuh / mobile */
 @media (max-width: 768px) {
   body {
     cursor: auto;
@@ -68,7 +61,7 @@ a, button {
   color: inherit;
   font: inherit;
   cursor: none;
-  /* Custom cursor over links */
+
 }
 
 ul {
@@ -85,7 +78,7 @@ h1, h2, h3, h4 {
   line-height: 1.1;
   font-weight: 700;
   letter-spacing: -0.02em;
-  /* Tipografi modern: huruf sedikit lebih rapat */
+
 }
 
 :focus-visible {
@@ -94,15 +87,12 @@ h1, h2, h3, h4 {
   border-radius: 4px;
 }
 
-/* ==========================================================
-   VARIABEL WARNA & TEMA (REFINED)
-   ========================================================== */
 :root {
   --ink: #111418;
-  /* Lebih pekat dari sebelumnya */
+
   --ink-muted: #525966;
   --paper: #F8F9F5;
-  /* Sedikit lebih hangat */
+
   --surface: #FFFFFF;
   --navy: #182d4f;
   --navy-dark: #0f1c32;
@@ -128,13 +118,11 @@ h1, h2, h3, h4 {
   --r-lg: 24px;
   --r-full: 999px;
 
-  /* Shadow yang lebih organik dan bertingkat (Soft Shadow) */
   --shadow-sm: 0 2px 4px rgba(17, 20, 24, 0.04), 0 1px 2px rgba(17, 20, 24, 0.02);
   --shadow-md: 0 16px 32px -12px rgba(17, 20, 24, 0.12), 0 4px 8px -4px rgba(17, 20, 24, 0.06);
   --shadow-lg: 0 32px 64px -16px rgba(17, 20, 24, 0.16), 0 16px 24px -8px rgba(17, 20, 24, 0.08);
 
   --glow: 0 0 40px rgba(195, 140, 53, 0.15);
-  /* Pendaran saat hover */
 
   --container-w: 1120px;
   --nav-h: 78px;
@@ -143,7 +131,7 @@ h1, h2, h3, h4 {
 body.dark-mode {
   --ink: #F8F9FA;
   --ink-muted: #B3B9C5;
-  /* Diubah dari #9CA3AF menjadi lebih terang (Silver) */
+
   --paper: #0B0E14;
   --surface: #13171F;
   --navy: #8AB4F8;
@@ -158,9 +146,6 @@ body.dark-mode {
   --glow: 0 0 40px rgba(138, 180, 248, 0.1);
 }
 
-/* ==========================================================
-   CUSTOM CURSOR
-   ========================================================== */
 .custom-cursor {
   position: fixed;
   top: 0;
@@ -170,10 +155,10 @@ body.dark-mode {
   border-radius: 50%;
   background-color: var(--gold);
   pointer-events: none;
-  /* Agar tidak menghalangi klik */
+
   z-index: 10000;
   mix-blend-mode: difference;
-  /* Membuat kursor terlihat unik di background gelap/terang */
+
   transform: translate(-50%, -50%) scale(1);
   transition: transform 0.15s ease-out;
 }
@@ -190,9 +175,6 @@ body.dark-mode {
   }
 }
 
-/* ==========================================================
-   LAYOUT DASAR
-   ========================================================== */
 .container {
   max-width: var(--container-w);
   margin-inline: auto;
@@ -227,7 +209,7 @@ body.dark-mode {
 .eyebrow::before {
   content: "";
   width: 24px;
-  /* Garis lebih panjang sedikit */
+
   height: 2px;
   background: var(--gold);
   display: inline-block;
@@ -241,10 +223,9 @@ body.dark-mode {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  
-  /* INI OBATNYA BIAR EKOR HURUF G & Y NGGAK KEPOTONG */
+
   line-height: 1.3;
-  padding-bottom: 5px; 
+  padding-bottom: 5px;
 }
 
 body.dark-mode .section-title {
@@ -252,8 +233,7 @@ body.dark-mode .section-title {
   -webkit-background-clip: text;
   background-clip: text;
   -webkit-text-fill-color: transparent;
-  
-  /* INI OBATNYA BIAR EKOR HURUF G & Y NGGAK KEPOTONG */
+
   line-height: 1.3;
   padding-bottom: 5px;
 }
@@ -264,9 +244,6 @@ body.dark-mode .section-title {
   font-size: 1.1rem;
 }
 
-/* ==========================================================
-   NAVBAR (REFINED)
-   ========================================================== */
 .navbar {
   position: sticky;
   top: 0;
@@ -303,12 +280,10 @@ body.dark-mode .section-title {
   height: 100%;
 }
 
-/* Memastikan tombol theme switch selalu tampil */
 .navbar__actions .theme-switch {
   display: flex !important;
 }
 
-/* Ukuran dan styling logo agar selalu tampil sempurna */
 .navbar__logo {
   width: 42px;
   height: 42px;
@@ -491,9 +466,6 @@ body.dark-mode .section-title {
   color: var(--ink);
 }
 
-/* ==========================================================
-   BUTTONS
-   ========================================================== */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -543,9 +515,6 @@ body.dark-mode .section-title {
   font-size: 0.85rem;
 }
 
-/* ==========================================================
-   THEME SWITCH
-   ========================================================== */
 .theme-switch {
   position: relative;
   display: flex;
@@ -598,15 +567,12 @@ body.dark-mode .theme-switch__thumb {
   transform: translateX(20px);
 }
 
-/* ==========================================================
-   HERO SECTION (REFINED DYNAMICS)
-   ========================================================== */
 .hero__grid {
   display: grid;
   grid-template-columns: minmax(260px, 340px) 1fr;
   gap: var(--sp-7);
   align-items: center;
-  /* Center align looks better */
+
 }
 
 .hero__photo-frame {
@@ -628,7 +594,7 @@ body.dark-mode .theme-switch__thumb {
   object-fit: cover;
   border-radius: var(--r-lg);
   border: 4px solid var(--surface);
-  /* Efek bingkai foto */
+
 }
 
 .hero__stamp {
@@ -645,7 +611,7 @@ body.dark-mode .theme-switch__thumb {
   justify-content: center;
   transform: rotate(-15deg);
   box-shadow: var(--shadow-md);
-  /* Animasi berputar pelan */
+
 }
 
 @keyframes spinSlow {
@@ -737,9 +703,6 @@ body.dark-mode .hero__name {
   font-weight: 500;
 }
 
-/* ==========================================================
-   PERBAIKAN BAGIAN ABOUT (TEXT TERPOTONG)
-   ========================================================== */
 .about__text {
   color: var(--ink-muted);
   font-size: 1.15rem;
@@ -753,9 +716,6 @@ body.dark-mode .hero__name {
   font-weight: 600;
 }
 
-/* ==========================================================
-   SOCIALS & CTA
-   ========================================================== */
 .socials {
   display: flex;
   flex-wrap: wrap;
@@ -844,9 +804,6 @@ body.dark-mode .hero__name {
   color: var(--gold);
 }
 
-/* ==========================================================
-   PORTFOLIO & ACHIEVEMENTS GRID (GLASS/CLEAN LOOK)
-   ========================================================== */
 .page-header {
   padding-block: var(--sp-1);
   text-align: center;
@@ -861,10 +818,11 @@ body.dark-mode .hero__name {
 }
 
 .portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: var(--sp-4);
-  align-items: start;
+  column-count: 3;
+
+  column-gap: var(--sp-4);
+
+  width: 100%;
 }
 
 .portfolio-card {
@@ -875,13 +833,18 @@ body.dark-mode .hero__name {
   display: flex;
   flex-direction: column;
   transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  break-inside: avoid;
+
+  margin-bottom: var(--sp-4);
+
 }
 
 .portfolio-card:hover {
   transform: translateY(-8px);
   box-shadow: var(--shadow-lg), var(--glow);
   border-color: var(--border);
-  /* Jangan ubah warna border, biarkan shadow yg kerja */
+
 }
 
 .portfolio-card__thumb {
@@ -892,7 +855,7 @@ body.dark-mode .hero__name {
 }
 
 .portfolio-card__thumb::after {
-  /* Overlay gradient halus di atas gambar */
+
   content: "";
   position: absolute;
   inset: 0;
@@ -940,7 +903,6 @@ body.dark-mode .hero__name {
   line-height: 1.6;
 }
 
-/* Status Badge Modern */
 .portfolio-card__body h3 .tag {
   display: inline-block;
   vertical-align: middle;
@@ -996,9 +958,17 @@ body.dark-mode .tag--green {
   color: #34d399;
 }
 
-/* ==========================================================
-   FOOTER
-   ========================================================== */
+.tag--red {
+  background: #fee2e2;
+  border-color: transparent;
+  color: #991b1b;
+}
+
+body.dark-mode .tag--red {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+}
+
 .footer {
   border-top: 1px solid var(--border);
   padding-block: var(--sp-5);
@@ -1049,9 +1019,6 @@ body.dark-mode .tag--green {
   height: 18px;
 }
 
-/* ==========================================================
-   ANIMASI (REVEAL) — DIPERBAIKI AGAR TIDAK MEMOTONG TEKS
-   ========================================================== */
 .reveal {
   opacity: 0;
   transform: translateY(20px);
@@ -1062,7 +1029,7 @@ body.dark-mode .tag--green {
 .reveal.is-visible {
   opacity: 1;
   transform: none;
-  /* Memastikan tidak ada batasan tinggi atau overflow yang memotong teks */
+
   max-height: none !important;
   overflow: visible !important;
 }
@@ -1074,9 +1041,6 @@ body.dark-mode .tag--green {
   }
 }
 
-/* ==========================================================
-   MODAL IMAGE
-   ========================================================== */
 .modal {
   display: none;
   position: fixed;
@@ -1165,9 +1129,6 @@ body.dark-mode .tag--green {
   display: none;
 }
 
-/* ==========================================================
-   PRELOADER
-   ========================================================== */
 html.skip-preloader .preloader {
   display: none !important;
 }
@@ -1227,22 +1188,24 @@ html.skip-preloader .preloader {
   letter-spacing: 0.1em;
 }
 
-
-/* ==========================================================
-   RESPONSIVE (MOBILE)
-   ========================================================== */
 @media (max-width: 920px) {
   .cta-grid {
     grid-template-columns: 1fr;
   }
 
   .portfolio-grid {
-    grid-template-columns: repeat(2, 1fr);
+    column-count: 2;
+
   }
 }
 
 @media (max-width: 768px) {
   .navbar__toggle {
+    .portfolio-grid {
+      column-count: 1;
+
+    }
+
     display: flex;
   }
 
@@ -1322,19 +1285,15 @@ html.skip-preloader .preloader {
   }
 }
 
-/* ==========================================================
-   PERBAIKAN LAYOUT & JARAK AMAN (MENANGANI TULISAN TERTABRAK)
-   ========================================================== */
 main {
   padding-top: var(--sp-6);
-  /* Memastikan jarak antar section lebih longgar agar teks tidak saling tabrak */
+
 }
 
 .section-block {
   padding-block: var(--sp-7);
 }
 
-/* Memperbaiki ukuran dan posisi SVG ikon pada chip social media */
 .social-chip svg {
   width: 20px;
   height: 20px;

@@ -10,34 +10,33 @@
 </head>
 
 <body>
-  <!-- ============ SCRIPT ANTI-KEDIP ============ -->
+
   <script>
     if (sessionStorage.getItem("hasSeenPreloader") === "true") {
-      // Cek apakah user menekan tombol Reload/Refresh (F5)
+
       const isReload = performance.getEntriesByType("navigation")[0]?.type === "reload";
       if (!isReload) {
-        document.documentElement.classList.add("skip-preloader"); // Sembunyikan seketika
+        document.documentElement.classList.add("skip-preloader"); 
       }
     }
   </script>
 
-  <!-- ============ PRELOADER (SCI-FI STYLE) ============ -->
   <div id="preloader" class="preloader">
     <div class="preloader__content">
       <div class="preloader__bar-container">
-        <!-- Kotak Loading Bar -->
+
         <div class="preloader__bar">
           <div class="preloader__progress" id="preloaderProgress"></div>
         </div>
-        <!-- Angka Persentase -->
+
         <div class="preloader__percentage" id="preloaderPercentage">0%</div>
       </div>
     </div>
   </div>
-  <!-- ============ NAVBAR ============ -->
+
   <header class="navbar" id="navbar">
     <div class="container navbar__inner">
-      <!-- DROPDOWN BUTTON — KIRI -->
+
       <button class="navbar__toggle" id="navToggle" type="button" aria-label="Buka menu navigasi" aria-expanded="false"
         aria-controls="navMenu">
         <span></span>
@@ -45,63 +44,39 @@
         <span></span>
       </button>
 
-      <!-- MENU DROPDOWN — KIRI -->
       <nav class="navbar__menu" id="navMenu" aria-hidden="true">
-        <a href="index.html" class="navbar__link"> Home </a>
-
-        <a href="portfolio.html" class="navbar__link is-active"> Portfolio </a>
-
+        <a href="index.html" class="navbar__link is-active"> Home </a>
+        <a href="portfolio.html" class="navbar__link"> Portfolio </a>
         <a href="achievements.html" class="navbar__link"> Achievements </a>
 
-        <a href="cv-anda.pdf" download class="btn btn--primary btn--sm">
+        <a href="CV YUSRIYAH FAJAR DWIPUTRA SANTOSO.pdf" download class="btn btn--primary btn--sm">
           Download My CV
         </a>
-
-        <!-- THEME SWITCH — KHUSUS MOBILE -->
-        <div class="navbar__mobile-theme">
-          <span class="navbar__mobile-theme-label"> Change theme </span>
-
-          <button class="theme-switch" id="themeToggleMobile" type="button" aria-label="Ganti mode warna"
-            aria-pressed="false">
-            <span class="theme-switch__icon theme-switch__icon--sun">☀</span>
-
-            <span class="theme-switch__track">
-              <span class="theme-switch__thumb"></span>
-            </span>
-
-            <span class="theme-switch__icon theme-switch__icon--moon">☾</span>
-          </button>
-        </div>
       </nav>
 
-      <!-- NAMA / JUDUL — TENGAH -->
       <span class="navbar__brand">
         HELLO!!!, this is my personal website
       </span>
 
-      <!-- KOMPONEN KANAN -->
       <div class="navbar__actions">
-        <!-- TOMBOL UBAH TEMA -->
+
         <button class="theme-switch" id="themeToggle" type="button" aria-label="Ganti mode warna" aria-pressed="false">
           <span class="theme-switch__icon theme-switch__icon--sun">☀</span>
-
           <span class="theme-switch__track">
             <span class="theme-switch__thumb"></span>
           </span>
-
           <span class="theme-switch__icon theme-switch__icon--moon">☾</span>
         </button>
 
-        <!-- LOGO — PALING KANAN -->
-        <span class="navbar__logo" aria-label="Beranda">
+        <a href="index.html" class="navbar__logo" aria-label="Beranda">
           <img src="Anggep ae logo.jpg" alt="Logo Yusriyah Fajar Dwiputra Santoso" class="navbar__logo-image" />
-        </span>
+        </a>
       </div>
     </div>
   </header>
 
   <main>
-    <!-- ============ HEADER HALAMAN ============ -->
+
     <section class="page-header">
       <div class="container reveal">
         <p class="eyebrow">Project and Coursework </p>
@@ -113,124 +88,217 @@
       </div>
     </section>
 
-    <!-- ============ GRID PORTOFOLIO ============ -->
     <section class="section-block is-top-tight">
       <div class="container">
         <div class="portfolio-grid">
 
-          <!--
-          ================================================================
-          SATU BLOK <article class="portfolio-card"> = SATU PROJECT.
-          Salin-tempel (copy-paste) blok ini untuk menambah project baru,
-          lalu ganti judul, deskripsi, tag, dan link "Lihat Project".
-          ================================================================
-        -->
-
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
-              <!-- Tambahkan data-images berisi daftar foto yang ingin ditampilkan di dalam modal -->
-              <img src="Porfolio/Portfolio 1.png" alt="Thumbnail Project 1" data-images="Porfolio/Portfolio 1.png">
+
+              <img src="Porfolio/Portfolio 1.png" alt="Thumbnail Project 1"
+                data-images="Porfolio/Portfolio 1.png, Porfolio/Portfolio 25.png, Porfolio/Portfolio 26.png">
             </div>
             <div class="portfolio-card__body">
               <h3>Website pertama saya<span class="tag tag--gold">ON GOING</span></h3>
               <p>Website saya sendiri yang dimana dibuat sedemikian rupa yang dibantu juga dengan bantuan AI supaya
-                mempermudah dalam pembuatan website ini, dengan menggunakan software VSCODE dan di program sederhana
+                mempermudah dalam pembuatan website ini, dengan menggunakan software <strong>VSCODE</strong> dan di
+                program sederhana
                 dengan HTML, CSS dan JS.</p>
               <div class="tag-row">
                 <span class="tag">HTML</span>
                 <span class="tag">CSS</span>
                 <span class="tag">Java Script</span>
+                <span class="tag">VS Code</span>
               </div>
             </div>
           </article>
 
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
-              <!-- Tambahkan data-images berisi daftar foto yang ingin ditampilkan di dalam modal -->
-              <img src="Porfolio/Portfolio 2.png" alt="Thumbnail Project 2" data-images="Porfolio/Portfolio 2.png, Porfolio/Portfolio 3.png">
+
+              <img src="Porfolio/Portfolio 2.png" alt="Thumbnail Project 2"
+                data-images="Porfolio/Portfolio 2.png, Porfolio/Portfolio 3.png">
             </div>
             <div class="portfolio-card__body">
               <h3>MPS Handling<span class="tag tag--gold">ON GOING</span></h3>
               <p>Project ini bertujuan untuk membuat variasi latihan untuk LKS (Lomba Kompetensi Siswa) di smk,
                 dikarenakan
                 untuk membeli alat aslinya diperlukan biaya yang mahal, maka dari itu saya berniat membuatkan berupa
-                "modul" satu set MPS (Modular Production System) Handling.</p>
+                "modul" satu <strong>set MPS (Modular Production System)</strong> Handling.</p>
               <div class="tag-row">
                 <span class="tag">CAD</span>
                 <span class="tag">3D Printing</span>
                 <span class="tag">3D Design</span>
+                <span class="tag">Autodesk Inventor</span>
               </div>
             </div>
           </article>
 
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
-              <!-- Tambahkan data-images berisi daftar foto yang ingin ditampilkan di dalam modal -->
+
               <img src="Porfolio/Portfolio 4.png" alt="Thumbnail Project 3"
                 data-images="Porfolio/Portfolio 4.png, Porfolio/Portfolio 5.png, Porfolio/Portfolio 6.png, Porfolio/Portfolio 7.png">
             </div>
             <div class="portfolio-card__body">
               <h3>PID Balancing with 2 Motor<span class="tag tag--gold">ON GOING</span></h3>
               <p>Ini adalah tugas dari PBL pada mata kuliah Manufaktur 2, yang dimana kelompok saya mendapatkan project
-                PID Balancing dengan menggunakan 2 motor brushless.</p>
+                PID Balancing dengan menggunakan 2 motor brushless yang sebelumnya sebenarnya sudah ada namun
+                dikarenakan alatnya yang dulu kurang propper maka dari itu kelas saya ditugaskan untuk membuat project
+                ini.</p>
               <div class="tag-row">
                 <span class="tag">CAD</span>
                 <span class="tag">CNC</span>
                 <span class="tag">Laser Cutting</span>
                 <span class="tag">3D Printing</span>
                 <span class="tag">3D Design</span>
+                <span class="tag">Autodesk Inventor</span>
               </div>
             </div>
           </article>
 
           <article class="portfolio-card reveal">
             <div class="portfolio-card__thumb">
-              <!-- Tambahkan data-images berisi daftar foto yang ingin ditampilkan di dalam modal -->
+
               <img src="Porfolio/Portfolio 8.png" alt="Thumbnail Project 4"
                 data-images="Porfolio/Portfolio 8.png, Porfolio/Portfolio 9.png, Porfolio/Portfolio 10.png">
             </div>
             <div class="portfolio-card__body">
               <h3>Pencacah Sampah<span class="tag tag--green">Done</span></h3>
               <p>Project desain 3D yang ditugaskan untuk membuat mesin sederhana pada mata kuliah Perancangan Mekanika
-                2, kelompok saya ditugaskan untuk membuat desain mesin Pencacah Sampah.</p>
+                2, kelompok saya memutuskan untuk membuat desain mesin Pencacah Sampah tugas ini hanya bertujuan untuk
+                mengasah kemampuan design 3D terutama pada software <strong>Autodesk Inventor.</strong></p>
               <div class="tag-row">
                 <span class="tag">CAD</span>
                 <span class="tag">3D Design</span>
+                <span class="tag">Autodesk Inventor</span>
               </div>
             </div>
           </article>
 
           <article class="portfolio-card reveal">
-            <div class="portfolio-card__thumb is-portrait"> <!-- TAMBAHKAN is-portrait DI SINI -->
-              <!-- Tambahkan data-images berisi daftar foto yang ingin ditampilkan di dalam modal -->
+            <div class="portfolio-card__thumb is-portrait"> 
+
               <img src="Porfolio/Portfolio 14.jpeg" alt="Thumbnail Project 5"
                 data-images="Porfolio/Portfolio 14.jpeg, Porfolio/Portfolio 15.jpeg, Porfolio/Portfolio 13.jpeg">
             </div>
             <div class="portfolio-card__body">
               <h3>Reverse Engineering 3 DOF<span class="tag tag--green">Done</span></h3>
               <p>Tugas desain 3D pada mata kuliah Perancangan Mekanika 1 pada semester 1, yang mana ditugaskan untuk
-                membuat 3 DOF desain 3D dan saya mendesain ulang bagian "modul" pada MPS (Modular Production System)
-                Handling.</p>
+                membuat <strong>3 DOF</strong> desain 3D dan saya mendesain ulang bagian "modul" pada <strong>MPS
+                  (Modular Production System)
+                  Handling.</strong></p>
               <div class="tag-row">
                 <span class="tag">CAD</span>
                 <span class="tag">3D Design</span>
+                <span class="tag">Autodesk Inventor</span>
               </div>
             </div>
           </article>
 
           <article class="portfolio-card reveal">
-            <div class="portfolio-card__thumb is-portrait"> <!-- TAMBAHKAN is-portrait DI SINI -->
-              <!-- Tambahkan data-images berisi daftar foto yang ingin ditampilkan di dalam modal -->
-              <img src="Porfolio/Portfolio 12.jpeg" alt="Thumbnail Project 5" data-images="Porfolio/Portfolio 12.jpeg, Porfolio/Portfolio 11.jpeg">
+            <div class="portfolio-card__thumb is-portrait"> 
+
+              <img src="Porfolio/Portfolio 12.jpeg" alt="Thumbnail Project 6"
+                data-images="Porfolio/Portfolio 12.jpeg, Porfolio/Portfolio 11.jpeg">
             </div>
             <div class="portfolio-card__body">
               <h3>PLC Panel untuk lomba<span class="tag tag--green">Done</span></h3>
-              <p>Project membuat panel yang digunakan sebelum lomba yaitu LKS (Lomba Kompetensi Siswa) pada tahun 2024,
-                kemudian di uji atau diimplementasikan untuk menggerakkan sistem pneumatic maupun MPS (Modular
-                Production System).</p>
+              <p>Project membuat panel yang digunakan sebelum lomba yaitu <strong>LKS (Lomba Kompetensi Siswa)</strong>
+                pada tahun 2024,
+                kemudian di uji atau diimplementasikan untuk menggerakkan sistem <strong>Pneumatic</strong> maupun
+                <strong>MPS (Modular
+                  Production System)</strong>.</p>
               <div class="tag-row">
                 <span class="tag">CAD</span>
                 <span class="tag">3D Design</span>
+                <span class="tag">Autodesk Inventor</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__thumb is-portrait"> 
+
+              <img src="Porfolio/Portfolio 18.png" alt="Thumbnail Project 7"
+                data-images="Porfolio/Portfolio 18.png, Porfolio/Portfolio 19.png">
+            </div>
+            <div class="portfolio-card__body">
+              <h3>Jam Digital Rangkaian Kombinasional & Sekuensial<span class="tag tag--red">Abandoned</span></h3>
+              <p>Project tugas akhir mata kuliah Elektronika Digital yang dimana tidak diperbolehkan menggunakan
+                mikrokontroler namun hanya menggunakan IC saja, dan saya mengambil untuk membuat Jam digital untuk
+                display namun menggunakan beberapa IC kemudian yang seharusnya diimplementasikan menjadi PCB
+                tapi tidak jadi karena waktu yang diberikan hanya sedikit, tapi tetap ingin saya realisasikan namun
+                belum ada dananya.</p>
+              <div class="tag-row">
+                <span class="tag">PCB Design</span>
+                <span class="tag">Proteus</span>
+                <span class="tag">Kicad</span>
+                <span class="tag">Schematic</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__thumb is-portrait"> 
+
+              <img src="Porfolio/Portfolio 17.jpeg" alt="Thumbnail Project 8"
+                data-images="Porfolio/Portfolio 17.jpeg, Porfolio/Portfolio 16.jpeg, Porfolio/Portfolio 23.jpeg, Porfolio/Portfolio 24.jpeg ">
+            </div>
+            <div class="portfolio-card__body">
+              <h3>Project Riset Robotani<span class="tag tag--green">Done</span></h3>
+              <p>Project ini dimana ketika saya masih berada di tim <strong>Riset Robotani</strong> yang dimana
+                melanjutkan project yang
+                belum dilanjutkan lagi, kemudian saya dan teman2 melanjutkan project ini dengan konsep Alat Penanam
+                Otomatis dan bisa digerakkan dengan controller, yang dimana kami melanjutkan untuk bagaimana cara
+                mekanisme agar bisa menanamnya kemudian bagaimana cara menggerakkannya menggunakan controller
+                dan <strong>Pixhawk Orange Cube</strong>, meskipun begitu dimana saya sendiri melanjutkan
+                project ini hanya sampai acara PENSasi saja.</p>
+              <div class="tag-row">
+                <span class="tag">Soldering</span>
+                <span class="tag">Mission Planner</span>
+                <span class="tag">Pixhawk</span>
+                <span class="tag">Autodesk Inventor</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__thumb is-portrait"> 
+
+              <img src="Porfolio/Portfolio 22.jpeg" alt="Thumbnail Project 9"
+                data-images="Porfolio/Portfolio 22.jpeg, Porfolio/Portfolio 21.jpeg, Porfolio/Portfolio 20.jpeg">
+            </div>
+            <div class="portfolio-card__body">
+              <h3>Autonomous Mobile Robot with 4 OmniWheels<span class="tag tag--red">Abandoned</span></h3>
+              <p>Project ini seharusnya dilanjutkan pada matakuliah Manufaktur 2, namun dikarenakan bahan yang seadanya
+                maka dari itu kelas saya ditugaskan untuk membuat project <strong>PID Balancing with 2 Motor</strong>,
+                kemudian tetap ingin saya lanjutkan untuk desain 3D nya terlebih dahulu.</p>
+              <div class="tag-row">
+                <span class="tag">3D Design</span>
+                <span class="tag">CAD</span>
+                <span class="tag">Autodesk Inventor</span>
+              </div>
+            </div>
+          </article>
+
+          <article class="portfolio-card reveal">
+            <div class="portfolio-card__thumb is-portrait"> 
+
+              <img src="Porfolio/Portfolio 27.png" alt="Thumbnail Project 10"
+                data-images="Porfolio/Portfolio 27.png, Porfolio/Portfolio 21.jpeg, Porfolio/Portfolio 20.jpeg">
+            </div>
+            <div class="portfolio-card__body">
+              <h3>PLC with ESP32<span class="tag tag--gold">ON GOING</span></h3>
+              <p>Project ini ditugaskan pada mata kuliah Dasar Sistem Elektronika (DSE) yang dimana kelas saya
+                ditugaskan untuk membuat project meminimalisir modul elektronika, bukan berarti tidak diperbolehkan,
+                untuk kelompok saya membuat project PLC dengan menggunakan ESP32 agar bisa diprogram mengguanakan
+                Aplikasi tambahan yaitu menggunakan <strong>OpenPLC Editor.</strong></p>
+              <div class="tag-row">
+                <span class="tag">Soldering</span>
+                <span class="tag">Schematic</span>
+                <span class="tag">Kicad</span>
+                <span class="tag">PCB Design</span>
               </div>
             </div>
           </article>
@@ -240,32 +308,27 @@
     </section>
   </main>
 
-  <!-- Modal / Lightbox Tinjau Gambar dengan Slider -->
   <div id="imageModal" class="modal" aria-hidden="true">
     <span class="modal__close" id="modalClose">&times;</span>
 
-    <!-- Tombol Panah Kiri -->
     <button class="modal__nav modal__nav--prev" id="modalPrev" aria-label="Gambar Sebelumnya">&#10094;</button>
 
     <img class="modal__content" id="modalImage" alt="Preview Gambar">
 
-    <!-- Tombol Panah Kanan -->
     <button class="modal__nav modal__nav--next" id="modalNext" aria-label="Gambar Selanjutnya">&#10095;</button>
   </div>
-  <!-- ============ FOOTER ============ -->
+
   <footer class="footer">
     <div class="container footer__inner">
 
-      <!-- Bagian Kiri: Copyright & Counter -->
       <div>
         <p>&copy; 2026 Yusriyah Fajar Dwiputra Santoso. <br> 👀 <span id="visitorCount">Memuat...</span>
           orang telah
           melihat website ini.</p>
       </div>
 
-      <!-- Bagian Kanan: Social Media -->
       <div class="footer__socials">
-        <!-- (Kode icon instagram, linkedin, threads tetap sama, jangan dihapus) -->
+
         <a href="https://instagram.com/oiisrill_" target="_blank" rel="noopener" aria-label="Instagram">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8">
             <rect x="2.5" y="2.5" width="19" height="19" rx="5.5" />
@@ -293,7 +356,7 @@
     </div>
   </footer>
   <script src="script.js"></script>
-  <!-- SCRIPT FIREBASE VISITOR COUNTER -->
+
   <script type="module">
     import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
     import { getDatabase, ref, onValue, runTransaction } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
@@ -311,22 +374,19 @@
     const app = initializeApp(firebaseConfig);
     const db = getDatabase(app);
 
-    // 1. Menggunakan satu database utama untuk semua halaman (Global)
     const visitorRef = ref(db, 'visitorCount');
 
-    // 2. Mengecek apakah device ini sudah pernah berkunjung
     const hasVisited = localStorage.getItem('telahBerkunjung');
 
     if (!hasVisited) {
-      // Jika belum, tambah +1
+
       runTransaction(visitorRef, (currentCount) => {
         return (currentCount || 0) + 1;
       });
-      // 3. Simpan ingatan ke browser (Ini yang sebelumnya typo)
+
       localStorage.setItem('telahBerkunjung', 'true');
     }
 
-    // 4. Menampilkan angka ke layar
     onValue(visitorRef, (snapshot) => {
       const data = snapshot.val();
       const countElement = document.getElementById('visitorCount');
