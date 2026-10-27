@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Project — Yusriyah Fajar Dwiputra Santoso</title>
+  <meta name="description" content="Project mandiri dan tugas kuliah Yusriyah Fajar Dwiputra Santoso sejak 2024: desain 3D, MPS Handling, PID balancing, dan panel PLC.">
+  <meta name="author" content="Yusriyah Fajar Dwiputra Santoso">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,100..900&display=swap">
+  <link rel="stylesheet" href="style.css">
+  <script>
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "dark" && t !== "light") {
+        t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+      }
+      document.documentElement.setAttribute("data-theme", t);
+    })();
+  </script>
+</head>
+<body>
+  <a class="skip" href="#isi">Langsung ke isi halaman</a>
+
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="index.html">
+        <img src="Anggep ae logo.jpg" alt="" width="36" height="36">
+        Yusriyah Fajar
+      </a>
+      <nav class="site-nav" aria-label="Utama">
+        <a href="index.html">Beranda</a>
+        <a href="portfolio.html" aria-current="page">Project</a>
+        <a href="achievements.html">Prestasi</a>
+        <a href="CV YUSRIYAH FAJAR DWIPUTRA SANTOSO.pdf" download>Unduh CV</a>
+        <button type="button" id="themeToggle" aria-pressed="false">Mode gelap</button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="isi">
+    <div class="wrap">
+      <div class="page-head">
+        <h1>Project</h1>
+        <p>Proyek mandiri dan tugas kuliah yang saya kerjakan sejak 2024. Klik gambar untuk melihat semua fotonya.</p>
+      </div>
+
+      <ol class="projects">
+
+        <li class="project">
+          <button type="button" class="thumb" data-label="Situs pribadi" data-images="Porfolio/Portfolio 1.png" aria-label="Perbesar gambar: situs pribadi">
+            <img src="Porfolio/Portfolio 1.png" alt="Tampilan situs pribadi" loading="lazy">
+          </button>
+          <div>
+            <h2>Situs pribadi</h2>
+            <span class="status status--ongoing">Sedang dikerjakan</span>
+            <p>Situs yang sedang kamu buka ini. Saya membangunnya dengan HTML, CSS, dan JavaScript di VS Code, dengan bantuan AI untuk mempercepat pengerjaan.</p>
+            <p class="tools"><b>Dipakai:</b> HTML, CSS, JavaScript</p>
+          </div>
+        </li>
+
+        <li class="project">
+          <button type="button" class="thumb" data-label="MPS Handling" data-images="Porfolio/Portfolio 2.png|Porfolio/Portfolio 3.png" aria-label="Perbesar gambar: MPS Handling, 2 foto">
+            <img src="Porfolio/Portfolio 2.png" alt="Desain modul MPS Handling" loading="lazy">
+            <span class="thumb__count">2 foto</span>
+          </button>
+          <div>
+            <h2>MPS Handling</h2>
+            <span class="status status--ongoing">Sedang dikerjakan</span>
+            <p>Modul latihan MPS (Modular Production System) Handling untuk persiapan LKS di SMK. Alat aslinya mahal, jadi saya membuat versi modul yang bisa dipakai berlatih.</p>
+            <p class="tools"><b>Dipakai:</b> CAD, desain 3D, cetak 3D</p>
+          </div>
+        </li>
+
+        <li class="project">
+          <button type="button" class="thumb" data-label="PID Balancing 2 motor" data-images="Porfolio/Portfolio 4.png|Porfolio/Portfolio 5.png|Porfolio/Portfolio 6.png|Porfolio/Portfolio 7.png" aria-label="Perbesar gambar: PID Balancing dua motor, 4 foto">
+            <img src="Porfolio/Portfolio 4.png" alt="Rancangan PID Balancing dengan dua motor" loading="lazy">
+            <span class="thumb__count">4 foto</span>
+          </button>
+          <div>
+            <h2>PID Balancing dengan 2 motor</h2>
+            <span class="status status--ongoing">Sedang dikerjakan</span>
+            <p>Tugas PBL mata kuliah Manufaktur 2. Kelompok saya mengerjakan sistem penyeimbang PID yang memakai dua motor brushless.</p>
+            <p class="tools"><b>Dipakai:</b> CAD, desain 3D, CNC, laser cutting, cetak 3D</p>
+          </div>
+        </li>
+
+        <li class="project">
+          <button type="button" class="thumb" data-label="Pencacah sampah" data-images="Porfolio/Portfolio 8.png|Porfolio/Portfolio 9.png|Porfolio/Portfolio 10.png" aria-label="Perbesar gambar: pencacah sampah, 3 foto">
+            <img src="Porfolio/Portfolio 8.png" alt="Desain 3D mesin pencacah sampah" loading="lazy">
+            <span class="thumb__count">3 foto</span>
+          </button>
+          <div>
+            <h2>Mesin pencacah sampah</h2>
+            <span class="status">Selesai</span>
+            <p>Tugas desain 3D mata kuliah Perancangan Mekanika 2. Kelompok saya merancang sebuah mesin sederhana: pencacah sampah.</p>
+            <p class="tools"><b>Dipakai:</b> CAD, desain 3D</p>
+          </div>
+        </li>
+
+        <li class="project">
+          <button type="button" class="thumb" data-label="Reverse engineering 3 DOF" data-images="Porfolio/Portfolio 14.jpeg|Porfolio/Portfolio 15.jpeg|Porfolio/Portfolio 13.jpeg" aria-label="Perbesar gambar: reverse engineering 3 DOF, 3 foto">
+            <img src="Porfolio/Portfolio 14.jpeg" alt="Desain 3D mekanisme 3 DOF" loading="lazy">
+            <span class="thumb__count">3 foto</span>
+          </button>
+          <div>
+            <h2>Reverse engineering 3 DOF</h2>
+            <span class="status">Selesai</span>
+            <p>Tugas desain 3D mata kuliah Perancangan Mekanika 1 di semester 1: membuat mekanisme 3 DOF. Saya mendesain ulang salah satu modul dari MPS Handling.</p>
+            <p class="tools"><b>Dipakai:</b> CAD, desain 3D</p>
+          </div>
+        </li>
+
+        <li class="project">
+          <button type="button" class="thumb" data-label="Panel PLC untuk lomba" data-images="Porfolio/Portfolio 12.jpeg|Porfolio/Portfolio 11.jpeg" aria-label="Perbesar gambar: panel PLC untuk lomba, 2 foto">
+            <img src="Porfolio/Portfolio 12.jpeg" alt="Panel PLC untuk persiapan LKS" loading="lazy">
+            <span class="thumb__count">2 foto</span>
+          </button>
+          <div>
+            <h2>Panel PLC untuk lomba</h2>
+            <span class="status">Selesai</span>
+            <p>Panel yang saya buat untuk persiapan LKS 2024, lalu diuji untuk menggerakkan sistem pneumatik dan MPS (Modular Production System).</p>
+            <p class="tools"><b>Dipakai:</b> CAD, desain 3D</p>
+          </div>
+        </li>
+
+      </ol>
+    </div>
+  </main>
+
+  <dialog class="lightbox" id="lightbox" aria-label="Pratinjau foto">
+    <button type="button" class="lightbox__close">Tutup</button>
+    <button type="button" class="lightbox__nav lightbox__prev" aria-label="Foto sebelumnya">&#8592;</button>
+    <img class="lightbox__img" alt="">
+    <button type="button" class="lightbox__nav lightbox__next" aria-label="Foto berikutnya">&#8594;</button>
+    <div class="lightbox__bar"><span class="lightbox__count" aria-live="polite"></span></div>
+  </dialog>
+
+  <footer class="site-footer">
+    <div class="wrap">
+      <p>&copy; 2026 Yusriyah Fajar Dwiputra Santoso</p>
+      <p><span id="visitorCount">…</span> kunjungan ke situs ini</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+  <script type="module" src="counter.js"></script>
+</body>
+</html>
